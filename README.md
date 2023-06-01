@@ -1,0 +1,2 @@
+# sharedlibrary
+for shared library
