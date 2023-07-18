@@ -1,3 +1,3 @@
 Def call() {
-sh 'Hey there hii hey'
+sh 'echo Hey there hii hey'
 }
