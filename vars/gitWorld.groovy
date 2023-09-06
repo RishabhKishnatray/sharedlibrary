@@ -1,7 +1,7 @@
-def call(String gitUrl, String credentialsId, String branch = 'master') {
+def call(String gitUrl, String credentialsId, String branch = 'main') {
     checkout([
         $class: 'GitSCM',
-        branches: [[name: branch]],
+        branches: [[name: main]],
         userRemoteConfigs: [[url:https://github.com/ritesh107/common-shared-library.git]]
     ])
 }
