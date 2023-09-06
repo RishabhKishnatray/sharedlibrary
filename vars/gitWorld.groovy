@@ -1,4 +1,4 @@
-def call(String gitUrl, String credentialsId, String branch = 'main') {
+def call(String gitUrl, String branch = 'main') {
     checkout([
         $class: 'GitSCM',
         branches: [[name: main]],
