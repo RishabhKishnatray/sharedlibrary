@@ -11,10 +11,10 @@ def call() {
                     cleanWs()
                 }
             }
-            stage('git clone') {
+            stage('git checkout') {
                 steps {
                     script {
-                        sh 'git clone https://github.com/RishabhKishnatray/employee-api.git'
+                        checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/RishabhKishnatray/employee-api.git']])
                     }
                 }
             }
