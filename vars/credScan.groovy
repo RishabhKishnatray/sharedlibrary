@@ -14,7 +14,7 @@ def call() {
             stage('git clone') {
                 steps {
                     script {
-                         checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/RishabhKishnatray/employee-api.git']])
+                         git branch: 'main', url: 'https://github.com/RishabhKishnatray/employee-api.git'
                     }
                 }
             }
