@@ -11,10 +11,10 @@ def call() {
                     cleanWs()
                 }
             }
-            stage('git checkout') {
+            stage('git clone') {
                 steps {
                     script {
-                        checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/RishabhKishnatray/employee-api.git']])
+                         checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/RishabhKishnatray/employee-api.git']])
                     }
                 }
             }
@@ -29,10 +29,7 @@ def call() {
             }
             stage('run') {
                 steps {
-                    sh '''
-                    cd employee-api
-                    gitleaks detect -p . -v
-                    '''
+                    sh 'gitleaks detect -p . -v'
                 }
             }
         }
