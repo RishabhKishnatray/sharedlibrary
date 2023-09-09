@@ -1,10 +1,6 @@
 def call() {
     pipeline {
         agent any
-        tools {
-            git 'Default'
-            jdk 'java'
-        }
         stages {
             stage('clean workspace') {
                 steps {
