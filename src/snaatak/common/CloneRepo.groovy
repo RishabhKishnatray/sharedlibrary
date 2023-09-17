@@ -1,7 +1,7 @@
 package snaatak.common
 
-def call( String repoUrl, String credentialsId, String branch ) {
+def call(String repoUrl = 'https://github.com/RishabhKishnatray/attendance-api.git', String credentialsId = 'shared-library', String branchName = 'main' ) {
        stage('Cloning Repo') {
-        git branch: branch, credentialsId: credentialsId, url: repoUrl
+        git branch: branchName, credentialsId: credentialsId, url: repoUrl
     }
 }
